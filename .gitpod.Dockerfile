@@ -1,6 +1,3 @@
-RUN apt update && apt install -y \
-    xfce4 \
-    x11vnc \
-    xvfb \
-    wget \
-    net-tools
+FROM gitpod/workspace-full-vnc
+
+RUN sudo apt update && sudo apt install -y firefox
