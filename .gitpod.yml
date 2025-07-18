@@ -1,6 +1,12 @@
 image:
   file: .gitpod.Dockerfile
 
+tasks:
+  - command: |
+      vncserver :1 -geometry 1280x800 -depth 24
+      websockify --web=/usr/share/novnc/ 6080 localhost:5901 &
+
 ports:
   - port: 6080
     onOpen: open-preview
+    name: Desktop GUI
