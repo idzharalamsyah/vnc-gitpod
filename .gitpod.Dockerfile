@@ -1,3 +1,5 @@
 FROM gitpod/workspace-full-vnc
 
-RUN sudo apt update && sudo apt install -y firefox
+USER root
+RUN apt-get update && apt-get install -y firefox
+USER gitpod
